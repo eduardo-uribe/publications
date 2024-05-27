@@ -9,7 +9,8 @@ body {
 main {
   box-sizing: border-box;
   max-width: 66ch;
-  margin: 2rem auto 0;
+  margin: 0 auto;
+  padding-top: 6rem;
   width: 85%;
 }
 

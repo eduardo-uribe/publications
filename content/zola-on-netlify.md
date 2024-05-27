@@ -3,7 +3,7 @@ title = "Zola on Netlify: two resources on deployment"
 date = 2024-05-26
 +++
 
-This website is constructed with [Zola](https://www.getzola.org/) the [Rust](https://www.rust-lang.org/) static site generator. Here are the two resources I referenced to deploy it on [Netlify](https://www.netlify.com/).
+This website is constructed with [Zola](https://www.getzola.org/) the [Rust](https://www.rust-lang.org/) static site generator. Here are the two resources I referenced to deploy on [Netlify](https://www.netlify.com/).
 
 1. Zola: [Netlify](https://www.getzola.org/documentation/deployment/netlify/) deployment
 2. A publication by [Davide Del Papa](https://dev.to/davidedelpapa/zola-tutorial-how-to-use-zola-the-rust-based-static-site-generator-for-your-next-small-project-and-deploy-it-on-netlify-375n)
