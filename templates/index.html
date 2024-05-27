@@ -17,7 +17,14 @@
       <ul class="publications-list">
         <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
         {% for page in section.pages %}
-        <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+        <li class="publications-list-item">
+          <a class="publications-list-link" href="{{ page.permalink | safe }}"
+            >{{ page.title }}</a
+          >
+          <p class="publications-list-date">
+            {{ page.date | date(format="%b %d, %Y") }}
+          </p>
+        </li>
         {% endfor %}
       </ul>
       {% endblock content %}
