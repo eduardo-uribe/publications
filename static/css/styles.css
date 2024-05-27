@@ -38,6 +38,16 @@ code {
   font-size: 0.9rem;
 }
 
+pre > code {
+  background: none;
+}
+
+pre {
+  border: solid 1px #e1e2e6;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
 .publications-list {
   list-style: none;
   margin: 0;
@@ -63,6 +73,12 @@ code {
   margin: 2rem 0 0;
 }
 
+.title {
+  margin-bottom: 0.2rem;
+}
+
 .date {
+  color: #a4a5a6;
+  font-size: 0.9rem;
   margin: 0 0 2rem;
 }
