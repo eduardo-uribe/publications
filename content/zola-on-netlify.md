@@ -1,5 +1,5 @@
 +++
-title = "Zola on Netlify: two resources on deployment"
+title = "Zola on Netlify"
 date = 2024-05-26
 +++
 

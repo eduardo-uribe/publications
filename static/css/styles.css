@@ -45,6 +45,7 @@ pre > code {
 pre {
   border: solid 1px #e1e2e6;
   border-radius: 0.25rem;
+  overflow-x: scroll;
   padding: 0.5rem;
 }
 
@@ -52,11 +53,6 @@ pre {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.publications-list-item {
-  display: flex;
-  justify-content: space-between;
 }
 
 .publications-list-link {
@@ -81,4 +77,11 @@ pre {
   color: #a4a5a6;
   font-size: 0.9rem;
   margin: 0 0 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .publications-list-item {
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -1,5 +1,5 @@
 +++
-title = "Serve static files in Rocket"
+title = "Static files in Rocket"
 date = 2024-05-27
 +++
 
