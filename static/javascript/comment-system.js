@@ -33,7 +33,7 @@ comment_system.addEventListener('submit', async function (event) {
   ul.prepend(comment_html);
 
   // send a post fetch request
-  let request = new Request('http://127.0.0.1:3000/api/v1/comment', {
+  let request = new Request('https://commentingsystem.com/api/v1/comment', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
