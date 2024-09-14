@@ -62,11 +62,11 @@ pre {
 
 .publications-list-date {
   color: #323233;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .sub-title {
-  margin: 2rem 0 0;
+  margin: 2rem 0 0.5rem;
 }
 
 .title {
@@ -77,6 +77,37 @@ pre {
   color: #a4a5a6;
   font-size: 0.9rem;
   margin: 0 0 2rem;
+}
+
+.newsletter-label {
+  margin-top: 2rem;
+}
+
+.newsletter-form {
+  border: 1px solid #e1e2e6;
+  border-radius: 0.25rem;
+  display: flex;
+  height: 2.5rem;
+  justify-content: space-between;
+  padding: 0.25rem;
+}
+
+.newsletter-form input {
+  border: none;
+  display: block;
+  font-size: 0.9rem;
+  width: 78%;
+  text-indent: 0.25rem;
+}
+
+.newsletter-form button {
+  border: none;
+  background: #b7410e;
+  border-radius: 0.2rem;
+  color: #fef2ee;
+  display: block;
+  font-size: 0.9rem;
+  width: 20%;
 }
 
 @media screen and (min-width: 600px) {

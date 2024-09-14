@@ -1,6 +1,9 @@
 +++
 title = "Zola on Netlify"
 date = 2024-05-26
+
+[extra]
+thread = 1
 +++
 
 This website is constructed with [Zola](https://www.getzola.org/) the [Rust](https://www.rust-lang.org/) static site generator. Here are the two resources I referenced to deploy on [Netlify](https://www.netlify.com/).

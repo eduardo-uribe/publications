@@ -12,7 +12,19 @@
       <h1>Eduardo Uribe</h1>
       <p><i>Software Engineer</i></p>
 
-      {% block content %}
+      {#
+      <p class="newsletter-label">
+        A <i>weekly-ish</i> newsletter about Rust, Rocket, and Zola
+      </p>
+      <form class="newsletter-form">
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email address"
+        />
+        <button type="submit">Subscribe</button>
+      </form>
+      #} {% block content %}
       <h2 class="sub-title">Publications</h2>
       <ul class="publications-list">
         <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
