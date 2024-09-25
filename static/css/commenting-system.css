@@ -1,0 +1,99 @@
+commenting-system {
+  section {
+    max-width: 62ch;
+    margin: 0 auto;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  form {
+    border: solid 1px #eee;
+    border-radius: 0.1rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+  }
+
+  label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  input {
+    border: solid 1px #eee;
+    box-sizing: border-box;
+    border-radius: 0.1rem;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+    width: 100%;
+  }
+
+  textarea {
+    border: solid 1px #eee;
+    box-sizing: border-box;
+    border-radius: 0.1rem;
+    display: block;
+    font-family: inherit;
+    padding: 0.25rem;
+    width: 100%;
+  }
+
+  button {
+    border: none;
+    background-color: #eee;
+    margin: 1rem 0 0;
+    padding: 0.25rem 0.75rem;
+  }
+
+  time {
+    align-self: end;
+  }
+
+  li {
+    border-left: solid 1px #eee;
+    padding-left: 0.75rem;
+  }
+
+  li:not(:first-child) {
+    margin-top: 1.75rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  ul li article div {
+    display: flex;
+  }
+
+  ul li article > p {
+    line-height: 1.5;
+    margin: 0.75rem 0 0;
+  }
+
+  ul li article div p {
+    font-size: 0.9rem;
+    margin: 0 1.25rem 0 0;
+  }
+
+  ul li article div time {
+    font-size: 0.9rem;
+    color: #c0c0c0;
+  }
+
+  ul li form {
+    margin-top: 1rem;
+  }
+
+  ul li form button {
+    margin-right: 0.5rem;
+  }
+}

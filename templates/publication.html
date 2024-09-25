@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/comment-system.css" />
+    <link rel="stylesheet" href="../css/commenting-system.css" />
     <title>{{page.title}}</title>
   </head>
   <body>
@@ -17,58 +17,62 @@
       <!-- define dynamic endpoint via macro -->
       {% if page.extra.thread %} {% set url =
       self::endpoint(id=page.extra.thread) %}
+
       <!-- query comments belonging to the provided thread -->
       {% set comments = load_data(url=url, format="json") %} {% endif %} {% if
       page.extra.thread %}
+
       <!-- commenting system -->
-      <section
-        id="comment-system"
-        data-thread-id="{% if page.extra.thread %}{{page.extra.thread}}{% endif %}"
+
+      <commenting-system
+        data-comment-system
+        data-comment-system-thread-id=""
+        data-comment-system-api-key="hardcoded_apikey"
       >
-        <h2>
-          Comments &#8226; {% if comments %}{{ comments | length }} {% else %} 0
-          {% endif %}
-        </h2>
-        <form class="comment-system-form">
-          <label for="author" class="comment-system-form-label">Author:</label>
-          <input
-            type="text"
-            name="author"
-            id="author"
-            class="comment-system-form-author"
-            value="Internet stranger"
-          />
-          <textarea
-            name="comment"
-            id="comment"
-            placeholder="Any thoughts or comments, share them here?"
-            required
-          ></textarea>
-          <button>Submit</button>
-        </form>
-        <ul class="comment-system-thread">
-          {% if comments %} {{ self::thread(comments=comments) }} {% endif %}
-        </ul>
-      </section>
+        <section>
+          <p>
+            Comments &#8226; {% if comments %}{{ comments | length }} {% else %}
+            0 {% endif %}
+          </p>
+
+          <form>
+            <label for="author">Author</label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              value="Internet stranger"
+            />
+
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment"></textarea>
+
+            <button>Submit</button>
+          </form>
+
+          <ul>
+            {% if comments %} {{ self::thread(comments=comments) }} {% endif %}
+          </ul>
+        </section>
+      </commenting-system>
+
       {% endif %}
     </main>
-
-    <script src="../javascript/comment-system.js"></script>
+    <script src="../javascript/commenting-system.js"></script>
   </body>
 </html>
 
 {% macro thread(comments) %} {% for comment in comments %}
 <li>
-  <article class="comment" data-comment-id="{{comment.comment_id}}">
-    <div class="comment-header">
-      <p class="comment-author">{{ comment.comment_author}}</p>
-      <span class="comment-bullet">&#8226;</span>
-      <time class="comment-datetime">{{ comment.comment_date_created }}</time>
+  <article data-comment-id="{{comment.comment_id}}">
+    <div>
+      <p>{{ comment.comment_author}}</p>
+      <time>{{ comment.comment_date_created }}</time>
     </div>
-    <p class="comment-content">{{ comment.comment_content }}</p>
-    <button class="comment-reply-button">Reply</button>
+    <p>{{ comment.comment_content }}</p>
+    <button data-reply-button>Reply</button>
   </article>
-  <ul class="comment-system-thread">
+  <ul>
     {% if comment.comment_replies | length > 0 %} {{
     self::thread(comments=comment.comment_replies) }} {% endif %}
   </ul>
