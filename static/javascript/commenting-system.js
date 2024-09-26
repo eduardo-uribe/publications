@@ -25,7 +25,7 @@ class CommentingSystem extends HTMLElement {
 
         ul.prepend(new_comment_html);
 
-        if (event.target.matches('[data-commenting-system] > form')) {
+        if (event.target.matches('commenting-system form')) {
           // reset form fields
           return event.target.reset();
         } else {
@@ -40,11 +40,13 @@ class CommentingSystem extends HTMLElement {
           event.target.remove();
         }
 
-        let endpoint = 'http://127.0.0.1:8000/api/v1/comment';
+        let endpoint = 'https://commentingsystem.com/api/v1/comment';
 
         let headers = new Headers();
-        let api_key = this.getAttribute('data-commenting-system-api-key');
-        headers.append('x-api-key', api_key);
+        let public_api_key = this.getAttribute(
+          'data-commenting-system-public-api-key'
+        );
+        headers.append('x-api-key', public_api_key);
         headers.append('Content-Type', 'application/json');
 
         let request = new Request(endpoint, {
