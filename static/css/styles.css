@@ -10,8 +10,8 @@ main {
   box-sizing: border-box;
   max-width: 66ch;
   margin: 0 auto;
-  padding-top: 6rem;
-  width: 85%;
+  padding: 6rem 1rem;
+  max-width: 62ch;
 }
 
 h1,
@@ -22,7 +22,7 @@ h2 {
 }
 
 p {
-  line-height: 1.15;
+  line-height: 1.5;
   margin: 0 0 0.5rem;
 }
 
