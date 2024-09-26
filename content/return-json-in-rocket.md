@@ -1,6 +1,6 @@
 +++
 title = "How to return JSON in Rocket.rs"
-date = 2024-06-01
+date = 2024-09-24
 +++
 
 [JSON](https://rocket.rs/guide/v0.5/responses/#json)
