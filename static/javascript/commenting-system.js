@@ -27,7 +27,7 @@ class CommentingSystem extends HTMLElement {
 
         if (event.target.matches('commenting-system form')) {
           // reset form fields
-          return event.target.reset();
+          event.target.reset();
         } else {
           // re-enable comment reply button
           let button = event.target
