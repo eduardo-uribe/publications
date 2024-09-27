@@ -6,6 +6,7 @@ class CommentingSystem extends HTMLElement {
       try {
         event.preventDefault();
 
+        // parent element: <li>
         let parent = event.target.parentElement;
         let ul = parent.querySelector('ul');
 
@@ -15,8 +16,11 @@ class CommentingSystem extends HTMLElement {
         let new_comment_data = {
           comment_author: form_data.get('author'),
           comment_content: form_data.get('comment'),
-          comment_thread_id: this.getAttribute(
-            'data-commenting-system-thread-id'
+          comment_parent_id: event.target.getAttribute(
+            'data-parent-comment-id'
+          ),
+          comment_thread_id: Number(
+            this.getAttribute('data-commenting-system-thread-id')
           ),
         };
 
@@ -25,7 +29,7 @@ class CommentingSystem extends HTMLElement {
 
         ul.prepend(new_comment_html);
 
-        if (event.target.matches('commenting-system form')) {
+        if (event.target.matches('commenting-system section > form')) {
           // reset form fields
           event.target.reset();
         } else {
@@ -63,11 +67,13 @@ class CommentingSystem extends HTMLElement {
 
     this.addEventListener('click', async function (event) {
       if (event.target.matches('[data-reply-button]')) {
-        // parent element
+        // parent element: <article>
         let parent = event.target.parentElement;
+        let parent_comment_id = parent.getAttribute('data-comment-id');
 
         // create a reply form
         let form = this.create_reply_form();
+        form.setAttribute('data-parent-comment-id', parent_comment_id);
         let textarea = form.querySelector('textarea');
 
         // display reply form
