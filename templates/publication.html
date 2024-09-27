@@ -19,7 +19,8 @@
       self::endpoint(id=page.extra.thread) %}
 
       <!-- query comments belonging to the provided thread -->
-      {% set comments = load_data(url=url, format="json") %} {% endif %} {% if
+      {% set comments = load_data(url=url, format="json",
+      headers=["origin=https://eduardouribe.com"]) %} {% endif %} {% if
       page.extra.thread %}
 
       <!-- commenting system -->
