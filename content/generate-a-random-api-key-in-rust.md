@@ -1,6 +1,9 @@
 +++
 title = "Generate a random API key in Rust"
 date = 2024-09-28
+
+[extra]
+thread = 3
 +++
 
 I'm slowly going to migrate my saas product [commentingsystem.com](https://commentingsystem.com) from Next.js to [Rust](https://www.rust-lang.org/) using the Rust web framework [Rocket](https://rocket.rs).

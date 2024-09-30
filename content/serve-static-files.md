@@ -1,6 +1,9 @@
 +++
 title = "Static files in Rocket"
 date = 2024-05-27
+
+[extra]
+thread = 6
 +++
 
 Rocket [FileServer](https://api.rocket.rs/v0.5/rocket/fs/struct.FileServer)

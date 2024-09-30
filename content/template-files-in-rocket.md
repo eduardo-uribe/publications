@@ -1,6 +1,9 @@
 +++
 title = "Template files in Rocket"
 date = 2024-05-28
+
+[extra]
+thread = 4
 +++
 
 Rocket [Templates](https://rocket.rs/guide/v0.5/responses/#templates) with the [rocket_dyn_templates](https://api.rocket.rs/v0.5/rocket_dyn_templates/) [crate](https://crates.io/crates/rocket_dyn_templates).
