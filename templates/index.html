@@ -3,31 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Eduardo</title>
+    <title>Eduardo Javier Uribe Cruz</title>
   </head>
 
   <body>
     <main>
-      <h1>Eduardo Uribe</h1>
-      <p><i>Software Engineer</i></p>
+      <h1>Eduardo Javier Uribe Cruz</h1>
+      <p><i>Software Engineer Specializing in Rust Backends</i></p>
 
-      {#
-      <p class="newsletter-label">
-        A <i>weekly-ish</i> newsletter about Rust, Rocket, and Zola
-      </p>
-      <form class="newsletter-form">
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email address"
-        />
-        <button type="submit">Subscribe</button>
-      </form>
-      #} {% block content %}
+      {% block content %}
       <h2 class="sub-title">Products</h2>
       <ul>
-        <li><a href="https://commentingsystem.com">Commenting system</a></li>
+        <li>
+          <a href="https://commentingsystem.com"
+            >https://commentingsystem.com</a
+          >
+        </li>
+        <li><a href="https://rustengineer.com">https://rustengineer.com</a></li>
       </ul>
 
       <h2 class="sub-title">Publications</h2>
@@ -39,7 +50,7 @@
             >{{ page.title }}</a
           >
           <p class="publications-list-date">
-            {{ page.date | date(format="%b %d, %Y") }}
+            {{ page.date | date(format="%m.%d.%y") }}
           </p>
         </li>
         {% endfor %}

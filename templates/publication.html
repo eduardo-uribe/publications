@@ -15,7 +15,7 @@
       {{ page.content | safe }} {% endblock content %}
 
       <!-- define dynamic endpoint via macro -->
-      {% if page.extra.thread %} {% set url =
+      {# {% if page.extra.thread %} {% set url =
       self::endpoint(id=page.extra.thread) %}
 
       <!-- query comments belonging to the provided thread -->
@@ -56,13 +56,15 @@
         </section>
       </commenting-system>
 
-      {% endif %}
+      {% endif %} #}
     </main>
+    {#
     <script src="../javascript/commenting-system.js"></script>
+    #}
   </body>
 </html>
 
-{% macro thread(comments) %} {% for comment in comments %}
+{# {% macro thread(comments) %} {% for comment in comments %}
 <li>
   <article data-comment-id="{{comment.comment_id}}">
     <div>
@@ -77,8 +79,8 @@
     self::thread(comments=comment.comment_replies) }} {% endif %}
   </ul>
 </li>
-{% endfor %} {% endmacro thread %}
+{% endfor %} {% endmacro thread %} #}
 
 <!-- macro that creates the dynamic endpoint -->
-{% macro endpoint(id) %} https://commentingsystem.com/api/v1/thread/{{id}} {%
-endmacro input %}
+{# {% macro endpoint(id) %} https://commentingsystem.com/api/v1/thread/{{id}} {%
+endmacro input %} #}
